@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/books', 'BookController@index');
+
+Route::get('/search','BookController@search')->name('search');
+
 Route::get('/', function () {
     return view('welcome');
 });
